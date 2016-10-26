@@ -165,7 +165,7 @@ exports.getAppropriateMoment = function (schedule, duration, workingHours) {
         return fromTimes;
     };
 
-    var halfHourConstant = 30 * 60 * 1000;
+    // var halfHourConstant = 30 * 60 * 1000;
     var enoughTime = function (indexes, minFreeTimeIndex, fineTimings) {
         var endTime = correctTimes[minFreeTimeIndex][indexes[minFreeTimeIndex]].to;
         for (var j = 0; j < 2; j++) {
