@@ -17,7 +17,7 @@ var gangSchedule = {
         { from: 'ПН 00:00+5', to: 'ПН 23:59+5' },
         { from: 'ВТ 00:00+5', to: 'СР 01:00+5' },
         { from: 'СР 02:00+5', to: 'СР 23:29+5' }
-    ],
+    ]
 };
 
 var bankWorkingHours = {
