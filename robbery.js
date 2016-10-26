@@ -243,8 +243,16 @@ exports.getAppropriateMoment = function (schedule, duration, workingHours) {
             if (robbingTime.length === 0) {
                 return '';
             }
-            template = template.replace(/%HH/, robbingTime[index].getHours());
-            template = template.replace(/%MM/, robbingTime[index].getMinutes());
+            var hrs = robbingTime[index].getHours();
+            if (hrs < 10) {
+                hrs = '0' + hrs;
+            }
+            var mns = robbingTime[index].getMinutes();
+            if (mns < 10) {
+                mns = '0' + mns;
+            }
+            template = template.replace(/%HH/, hrs);
+            template = template.replace(/%MM/, mns);
             template = template.replace(/%DD/, numToDayFormat[robbingTime[index].getDay()]);
 
             return template;
